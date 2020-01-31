@@ -1,0 +1,681 @@
+[root@ip-172-31-17-104 ~]# cd /opt
+[root@ip-172-31-17-104 opt]# yum install -y gcc-c++ make
+Last metadata expiration check: 0:28:37 ago on Fri 31 Jan 2020 09:40:53 AM UTC.
+Dependencies resolved.
+================================================================================================================================================================================================
+ Package                                    Arch                              Version                                          Repository                                                  Size
+================================================================================================================================================================================================
+Installing:
+ gcc-c++                                    x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-appstream-rhui-rpms                             12 M
+ make                                       x86_64                            1:4.2.1-9.el8                                    rhui-rhel-8-baseos-rhui-rpms                               498 k
+Upgrading:
+ libstdc++                                  x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-baseos-rhui-rpms                               451 k
+ libgomp                                    x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-baseos-rhui-rpms                               203 k
+ libgcc                                     x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-baseos-rhui-rpms                                78 k
+Installing dependencies:
+ libstdc++-devel                            x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-appstream-rhui-rpms                            2.0 M
+ cpp                                        x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-appstream-rhui-rpms                             10 M
+ isl                                        x86_64                            0.16.1-6.el8                                     rhui-rhel-8-appstream-rhui-rpms                            841 k
+ libmpc                                     x86_64                            1.0.2-9.el8                                      rhui-rhel-8-appstream-rhui-rpms                             59 k
+ gcc                                        x86_64                            8.3.1-4.5.el8                                    rhui-rhel-8-appstream-rhui-rpms                             23 M
+ libxcrypt-devel                            x86_64                            4.1.1-4.el8                                      rhui-rhel-8-baseos-rhui-rpms                                25 k
+ glibc-devel                                x86_64                            2.28-42.el8_0.1                                  rhui-rhel-8-baseos-rhui-rpms                               1.0 M
+ glibc-headers                              x86_64                            2.28-42.el8_0.1                                  rhui-rhel-8-baseos-rhui-rpms                               465 k
+ binutils                                   x86_64                            2.30-58.el8                                      rhui-rhel-8-baseos-rhui-rpms                               5.7 M
+ kernel-headers                             x86_64                            4.18.0-147.3.1.el8_1                             rhui-rhel-8-baseos-rhui-rpms                               2.7 M
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  12 Packages
+Upgrade   3 Packages
+
+Total download size: 60 M
+Downloading Packages:
+(1/15): libstdc++-devel-8.3.1-4.5.el8.x86_64.rpm                                                                                                                 12 MB/s | 2.0 MB     00:00
+(2/15): isl-0.16.1-6.el8.x86_64.rpm                                                                                                                             6.2 MB/s | 841 kB     00:00
+(3/15): gcc-c++-8.3.1-4.5.el8.x86_64.rpm                                                                                                                         28 MB/s |  12 MB     00:00
+(4/15): libmpc-1.0.2-9.el8.x86_64.rpm                                                                                                                           424 kB/s |  59 kB     00:00
+(5/15): cpp-8.3.1-4.5.el8.x86_64.rpm                                                                                                                             22 MB/s |  10 MB     00:00
+(6/15): libxcrypt-devel-4.1.1-4.el8.x86_64.rpm                                                                                                                  178 kB/s |  25 kB     00:00
+(7/15): make-4.2.1-9.el8.x86_64.rpm                                                                                                                             3.8 MB/s | 498 kB     00:00
+(8/15): glibc-devel-2.28-42.el8_0.1.x86_64.rpm                                                                                                                  6.7 MB/s | 1.0 MB     00:00
+(9/15): glibc-headers-2.28-42.el8_0.1.x86_64.rpm                                                                                                                3.7 MB/s | 465 kB     00:00
+(10/15): kernel-headers-4.18.0-147.3.1.el8_1.x86_64.rpm                                                                                                          12 MB/s | 2.7 MB     00:00
+(11/15): binutils-2.30-58.el8.x86_64.rpm                                                                                                                         22 MB/s | 5.7 MB     00:00
+(12/15): libstdc++-8.3.1-4.5.el8.x86_64.rpm                                                                                                                     3.6 MB/s | 451 kB     00:00
+(13/15): gcc-8.3.1-4.5.el8.x86_64.rpm                                                                                                                            32 MB/s |  23 MB     00:00
+(14/15): libgomp-8.3.1-4.5.el8.x86_64.rpm                                                                                                                       1.1 MB/s | 203 kB     00:00
+(15/15): libgcc-8.3.1-4.5.el8.x86_64.rpm                                                                                                                        441 kB/s |  78 kB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                            26 MB/s |  60 MB     00:02
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                        1/1
+  Upgrading        : libgcc-8.3.1-4.5.el8.x86_64                                                                                                                                           1/18
+  Running scriptlet: libgcc-8.3.1-4.5.el8.x86_64                                                                                                                                           1/18
+  Upgrading        : libstdc++-8.3.1-4.5.el8.x86_64                                                                                                                                        2/18
+  Running scriptlet: libstdc++-8.3.1-4.5.el8.x86_64                                                                                                                                        2/18
+  Installing       : libmpc-1.0.2-9.el8.x86_64                                                                                                                                             3/18
+  Running scriptlet: libmpc-1.0.2-9.el8.x86_64                                                                                                                                             3/18
+  Installing       : cpp-8.3.1-4.5.el8.x86_64                                                                                                                                              4/18
+  Running scriptlet: cpp-8.3.1-4.5.el8.x86_64                                                                                                                                              4/18
+  Installing       : libstdc++-devel-8.3.1-4.5.el8.x86_64                                                                                                                                  5/18
+  Installing       : binutils-2.30-58.el8.x86_64                                                                                                                                           6/18
+  Running scriptlet: binutils-2.30-58.el8.x86_64                                                                                                                                           6/18
+  Upgrading        : libgomp-8.3.1-4.5.el8.x86_64                                                                                                                                          7/18
+  Running scriptlet: libgomp-8.3.1-4.5.el8.x86_64                                                                                                                                          7/18
+  Installing       : kernel-headers-4.18.0-147.3.1.el8_1.x86_64                                                                                                                            8/18
+  Running scriptlet: glibc-headers-2.28-42.el8_0.1.x86_64                                                                                                                                  9/18
+  Installing       : glibc-headers-2.28-42.el8_0.1.x86_64                                                                                                                                  9/18
+  Installing       : glibc-devel-2.28-42.el8_0.1.x86_64                                                                                                                                   10/18
+  Running scriptlet: glibc-devel-2.28-42.el8_0.1.x86_64                                                                                                                                   10/18
+  Installing       : libxcrypt-devel-4.1.1-4.el8.x86_64                                                                                                                                   11/18
+  Installing       : isl-0.16.1-6.el8.x86_64                                                                                                                                              12/18
+  Running scriptlet: isl-0.16.1-6.el8.x86_64                                                                                                                                              12/18
+  Installing       : gcc-8.3.1-4.5.el8.x86_64                                                                                                                                             13/18
+  Running scriptlet: gcc-8.3.1-4.5.el8.x86_64                                                                                                                                             13/18
+  Installing       : gcc-c++-8.3.1-4.5.el8.x86_64                                                                                                                                         14/18
+  Installing       : make-1:4.2.1-9.el8.x86_64                                                                                                                                            15/18
+  Running scriptlet: make-1:4.2.1-9.el8.x86_64                                                                                                                                            15/18
+  Cleanup          : libstdc++-8.2.1-3.5.el8.x86_64                                                                                                                                       16/18
+  Running scriptlet: libstdc++-8.2.1-3.5.el8.x86_64                                                                                                                                       16/18
+  Cleanup          : libgcc-8.2.1-3.5.el8.x86_64                                                                                                                                          17/18
+  Running scriptlet: libgcc-8.2.1-3.5.el8.x86_64                                                                                                                                          17/18
+  Running scriptlet: libgomp-8.2.1-3.5.el8.x86_64                                                                                                                                         18/18
+  Cleanup          : libgomp-8.2.1-3.5.el8.x86_64                                                                                                                                         18/18
+  Running scriptlet: libgomp-8.2.1-3.5.el8.x86_64                                                                                                                                         18/18
+  Verifying        : gcc-c++-8.3.1-4.5.el8.x86_64                                                                                                                                          1/18
+  Verifying        : libstdc++-devel-8.3.1-4.5.el8.x86_64                                                                                                                                  2/18
+  Verifying        : cpp-8.3.1-4.5.el8.x86_64                                                                                                                                              3/18
+  Verifying        : isl-0.16.1-6.el8.x86_64                                                                                                                                               4/18
+  Verifying        : libmpc-1.0.2-9.el8.x86_64                                                                                                                                             5/18
+  Verifying        : gcc-8.3.1-4.5.el8.x86_64                                                                                                                                              6/18
+  Verifying        : libxcrypt-devel-4.1.1-4.el8.x86_64                                                                                                                                    7/18
+  Verifying        : make-1:4.2.1-9.el8.x86_64                                                                                                                                             8/18
+  Verifying        : glibc-devel-2.28-42.el8_0.1.x86_64                                                                                                                                    9/18
+  Verifying        : glibc-headers-2.28-42.el8_0.1.x86_64                                                                                                                                 10/18
+  Verifying        : binutils-2.30-58.el8.x86_64                                                                                                                                          11/18
+  Verifying        : kernel-headers-4.18.0-147.3.1.el8_1.x86_64                                                                                                                           12/18
+  Verifying        : libstdc++-8.3.1-4.5.el8.x86_64                                                                                                                                       13/18
+  Verifying        : libstdc++-8.2.1-3.5.el8.x86_64                                                                                                                                       14/18
+  Verifying        : libgomp-8.3.1-4.5.el8.x86_64                                                                                                                                         15/18
+  Verifying        : libgomp-8.2.1-3.5.el8.x86_64                                                                                                                                         16/18
+  Verifying        : libgcc-8.3.1-4.5.el8.x86_64                                                                                                                                          17/18
+  Verifying        : libgcc-8.2.1-3.5.el8.x86_64                                                                                                                                          18/18
+
+Upgraded:
+  libstdc++-8.3.1-4.5.el8.x86_64                                   libgomp-8.3.1-4.5.el8.x86_64                                   libgcc-8.3.1-4.5.el8.x86_64
+
+Installed:
+  gcc-c++-8.3.1-4.5.el8.x86_64   make-1:4.2.1-9.el8.x86_64                    libstdc++-devel-8.3.1-4.5.el8.x86_64   cpp-8.3.1-4.5.el8.x86_64             isl-0.16.1-6.el8.x86_64
+  libmpc-1.0.2-9.el8.x86_64      gcc-8.3.1-4.5.el8.x86_64                     libxcrypt-devel-4.1.1-4.el8.x86_64     glibc-devel-2.28-42.el8_0.1.x86_64   glibc-headers-2.28-42.el8_0.1.x86_64
+  binutils-2.30-58.el8.x86_64    kernel-headers-4.18.0-147.3.1.el8_1.x86_64
+
+Complete!
+[root@ip-172-31-17-104 opt]# yum install nodejs -y
+Last metadata expiration check: 0:29:00 ago on Fri 31 Jan 2020 09:40:53 AM UTC.
+Dependencies resolved.
+================================================================================================================================================================================================
+ Package                      Arch                         Version                                                                  Repository                                             Size
+================================================================================================================================================================================================
+Installing:
+ nodejs                       x86_64                       1:10.16.3-2.module+el8.0.0+4214+49953fda                                 rhui-rhel-8-appstream-rhui-rpms                       9.0 M
+Installing dependencies:
+ npm                          x86_64                       1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda                         rhui-rhel-8-appstream-rhui-rpms                       3.8 M
+Enabling module streams:
+ nodejs                                                    10
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  2 Packages
+
+Total download size: 13 M
+Installed size: 59 M
+Downloading Packages:
+(1/2): npm-6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64.rpm                                                                                             15 MB/s | 3.8 MB     00:00
+(2/2): nodejs-10.16.3-2.module+el8.0.0+4214+49953fda.x86_64.rpm                                                                                                  20 MB/s | 9.0 MB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                            28 MB/s |  13 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Running scriptlet: npm-1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64                                                                                                            1/1
+  Preparing        :                                                                                                                                                                        1/1
+  Installing       : nodejs-1:10.16.3-2.module+el8.0.0+4214+49953fda.x86_64                                                                                                                 1/2
+  Installing       : npm-1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64                                                                                                            2/2
+  Running scriptlet: npm-1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64                                                                                                            2/2
+  Verifying        : npm-1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64                                                                                                            1/2
+  Verifying        : nodejs-1:10.16.3-2.module+el8.0.0+4214+49953fda.x86_64                                                                                                                 2/2
+
+Installed:
+  nodejs-1:10.16.3-2.module+el8.0.0+4214+49953fda.x86_64                                       npm-1:6.9.0-1.10.16.3.2.module+el8.0.0+4214+49953fda.x86_64
+
+Complete!
+[root@ip-172-31-17-104 opt]# npm install yarn -g
+/usr/bin/yarn -> /usr/lib/node_modules/yarn/bin/yarn.js
+/usr/bin/yarnpkg -> /usr/lib/node_modules/yarn/bin/yarn.js
++ yarn@1.21.1
+added 1 package in 0.344s
+[root@ip-172-31-17-104 opt]# ls
+[root@ip-172-31-17-104 opt]# node --version
+v10.16.3
+[root@ip-172-31-17-104 opt]# npm --version
+6.9.0
+[root@ip-172-31-17-104 opt]# npm install -g @angular/cli
+/usr/bin/ng -> /usr/lib/node_modules/@angular/cli/bin/ng
+
+> @angular/cli@8.3.24 postinstall /usr/lib/node_modules/@angular/cli
+> node ./bin/postinstall/script.js
+
+? Would you like to share anonymous usage data with the Angular Team at Google under
+Google’s Privacy Policy at https://policies.google.com/privacy? For more details and
+how to change this setting, see http://angular.io/analytics. No
++ @angular/cli@8.3.24
+added 251 packages from 186 contributors in 25.003s
+[root@ip-172-31-17-104 opt]# npm install -g polymer-cli --unsafe-perm
+/usr/bin/polymer -> /usr/lib/node_modules/polymer-cli/bin/polymer.js
+
+> wd@1.11.2 install /usr/lib/node_modules/polymer-cli/node_modules/wd
+> node scripts/build-browser-scripts
+
+
+> puppeteer@1.18.1 install /usr/lib/node_modules/polymer-cli/node_modules/puppeteer
+> node install.js
+
+Downloading Chromium r672088 - 112.1 Mb [====================] 100% 0.0s
+Chromium downloaded to /usr/lib/node_modules/polymer-cli/node_modules/puppeteer/.local-chromium/linux-672088
+
+> core-js@2.6.9 postinstall /usr/lib/node_modules/polymer-cli/node_modules/core-js
+> node scripts/postinstall || echo "ignore"
+
+Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+
+The project needs your help! Please consider supporting of core-js on Open Collective or Patreon:
+> https://opencollective.com/core-js
+> https://www.patreon.com/zloirock
+
+Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+
+
+> spawn-sync@1.0.15 postinstall /usr/lib/node_modules/polymer-cli/node_modules/spawn-sync
+> node postinstall
+
+
+> sauce-connect-launcher@1.2.7 postinstall /usr/lib/node_modules/polymer-cli/node_modules/sauce-connect-launcher
+> node scripts/install.js || nodejs scripts/install.js
+
+
+> wct-sauce@2.1.0 postinstall /usr/lib/node_modules/polymer-cli/node_modules/wct-sauce
+> node scripts/postinstall.js
+
+Prefetching the Sauce Connect binary.
+Missing Sauce Connect local proxy, downloading dependency
+This will only happen once.
+Downloading 8.94MB
+Archive checksum verified.
+Unzipping /usr/lib/node_modules/polymer-cli/node_modules/sauce-connect-launcher/sc/sc-4.5.4-linux.tar.gz
+Removing /usr/lib/node_modules/polymer-cli/node_modules/sauce-connect-launcher/sc/sc-4.5.4-linux.tar.gz
+Sauce Connect downloaded correctly
+
+> wct-local@2.1.5 postinstall /usr/lib/node_modules/polymer-cli/node_modules/wct-local
+> node scripts/postinstall.js
+
+----------
+selenium-standalone installation starting
+----------
+
+---
+selenium install:
+from: https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+to: /usr/lib/node_modules/polymer-cli/node_modules/selenium-standalone/.selenium/selenium-server/3.141.59-server.jar
+---
+chrome install:
+from: https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
+to: /usr/lib/node_modules/polymer-cli/node_modules/selenium-standalone/.selenium/chromedriver/2.43-x64-chromedriver
+---
+firefox install:
+from: https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+to: /usr/lib/node_modules/polymer-cli/node_modules/selenium-standalone/.selenium/geckodriver/0.23.0-x64-geckodriver
+
+
+-----
+selenium-standalone installation finished
+-----
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/polymer-cli/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ polymer-cli@1.9.11
+added 1565 packages from 1720 contributors in 36.658s
+
+[root@ip-172-31-17-104 ~]# yum install git -y
+Last metadata expiration check: 0:02:18 ago on Fri 31 Jan 2020 10:21:24 AM UTC.
+Dependencies resolved.
+================================================================================================================================================================================================
+ Package                                          Arch                             Version                                      Repository                                                 Size
+================================================================================================================================================================================================
+Installing:
+ git                                              x86_64                           2.18.2-1.el8_1                               rhui-rhel-8-appstream-rhui-rpms                           186 k
+Installing dependencies:
+ perl-Error                                       noarch                           1:0.17025-2.el8                              rhui-rhel-8-appstream-rhui-rpms                            46 k
+ perl-Net-SSLeay                                  x86_64                           1.88-1.el8                                   rhui-rhel-8-appstream-rhui-rpms                           379 k
+ perl-TermReadKey                                 x86_64                           2.37-7.el8                                   rhui-rhel-8-appstream-rhui-rpms                            40 k
+ perl-libnet                                      noarch                           3.11-3.el8                                   rhui-rhel-8-appstream-rhui-rpms                           121 k
+ perl-URI                                         noarch                           1.73-3.el8                                   rhui-rhel-8-appstream-rhui-rpms                           116 k
+ perl-Digest-MD5                                  x86_64                           2.55-396.el8                                 rhui-rhel-8-appstream-rhui-rpms                            37 k
+ perl-Digest                                      noarch                           1.17-395.el8                                 rhui-rhel-8-appstream-rhui-rpms                            27 k
+ git-core-doc                                     noarch                           2.18.2-1.el8_1                               rhui-rhel-8-appstream-rhui-rpms                           2.3 M
+ perl-Git                                         noarch                           2.18.2-1.el8_1                               rhui-rhel-8-appstream-rhui-rpms                            77 k
+ git-core                                         x86_64                           2.18.2-1.el8_1                               rhui-rhel-8-appstream-rhui-rpms                           5.0 M
+ perl-Text-Tabs+Wrap                              noarch                           2013.0523-395.el8                            rhui-rhel-8-baseos-rhui-rpms                               24 k
+ perl-IO                                          x86_64                           1.38-416.el8                                 rhui-rhel-8-baseos-rhui-rpms                              141 k
+ perl-Getopt-Long                                 noarch                           1:2.50-4.el8                                 rhui-rhel-8-baseos-rhui-rpms                               63 k
+ perl-podlators                                   noarch                           4.11-1.el8                                   rhui-rhel-8-baseos-rhui-rpms                              118 k
+ perl-Data-Dumper                                 x86_64                           2.167-399.el8                                rhui-rhel-8-baseos-rhui-rpms                               58 k
+ perl-Time-Local                                  noarch                           1:1.280-1.el8                                rhui-rhel-8-baseos-rhui-rpms                               34 k
+ emacs-filesystem                                 noarch                           1:26.1-5.el8                                 rhui-rhel-8-baseos-rhui-rpms                               69 k
+ perl-Encode                                      x86_64                           4:2.97-3.el8                                 rhui-rhel-8-baseos-rhui-rpms                              1.5 M
+ perl-parent                                      noarch                           1:0.237-1.el8                                rhui-rhel-8-baseos-rhui-rpms                               20 k
+ perl-Term-ANSIColor                              noarch                           4.06-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               46 k
+ perl-Pod-Escapes                                 noarch                           1:1.07-395.el8                               rhui-rhel-8-baseos-rhui-rpms                               20 k
+ perl-MIME-Base64                                 x86_64                           3.15-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               31 k
+ perl-Scalar-List-Utils                           x86_64                           3:1.49-2.el8                                 rhui-rhel-8-baseos-rhui-rpms                               68 k
+ perl-Text-ParseWords                             noarch                           3.30-395.el8                                 rhui-rhel-8-baseos-rhui-rpms                               18 k
+ perl-macros                                      x86_64                           4:5.26.3-416.el8                             rhui-rhel-8-baseos-rhui-rpms                               72 k
+ perl-File-Path                                   noarch                           2.15-2.el8                                   rhui-rhel-8-baseos-rhui-rpms                               38 k
+ perl-Pod-Perldoc                                 noarch                           3.28-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               88 k
+ perl-threads-shared                              x86_64                           1.58-2.el8                                   rhui-rhel-8-baseos-rhui-rpms                               48 k
+ perl-Pod-Simple                                  noarch                           1:3.35-395.el8                               rhui-rhel-8-baseos-rhui-rpms                              213 k
+ perl-File-Temp                                   noarch                           0.230.600-1.el8                              rhui-rhel-8-baseos-rhui-rpms                               63 k
+ perl-PathTools                                   x86_64                           3.74-1.el8                                   rhui-rhel-8-baseos-rhui-rpms                               90 k
+ perl-Pod-Usage                                   noarch                           4:1.69-395.el8                               rhui-rhel-8-baseos-rhui-rpms                               34 k
+ perl-Errno                                       x86_64                           1.28-416.el8                                 rhui-rhel-8-baseos-rhui-rpms                               76 k
+ perl-constant                                    noarch                           1.33-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               25 k
+ perl-Term-Cap                                    noarch                           1.17-395.el8                                 rhui-rhel-8-baseos-rhui-rpms                               23 k
+ perl-HTTP-Tiny                                   noarch                           0.074-1.el8                                  rhui-rhel-8-baseos-rhui-rpms                               58 k
+ perl-Exporter                                    noarch                           5.72-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               34 k
+ perl-threads                                     x86_64                           1:2.21-2.el8                                 rhui-rhel-8-baseos-rhui-rpms                               61 k
+ perl-Unicode-Normalize                           x86_64                           1.25-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               82 k
+ perl-Storable                                    x86_64                           1:3.11-3.el8                                 rhui-rhel-8-baseos-rhui-rpms                               98 k
+ perl-Carp                                        noarch                           1.42-396.el8                                 rhui-rhel-8-baseos-rhui-rpms                               30 k
+ perl-interpreter                                 x86_64                           4:5.26.3-416.el8                             rhui-rhel-8-baseos-rhui-rpms                              6.3 M
+ perl-libs                                        x86_64                           4:5.26.3-416.el8                             rhui-rhel-8-baseos-rhui-rpms                              1.6 M
+ perl-Socket                                      x86_64                           4:2.027-3.el8                                rhui-rhel-8-baseos-rhui-rpms                               59 k
+Installing weak dependencies:
+ perl-IO-Socket-IP                                noarch                           0.39-5.el8                                   rhui-rhel-8-appstream-rhui-rpms                            47 k
+ perl-IO-Socket-SSL                               noarch                           2.066-3.el8                                  rhui-rhel-8-appstream-rhui-rpms                           297 k
+ perl-Mozilla-CA                                  noarch                           20160104-7.el8                               rhui-rhel-8-appstream-rhui-rpms                            15 k
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  48 Packages
+
+Total download size: 20 M
+Installed size: 78 M
+Downloading Packages:
+(1/48): perl-Error-0.17025-2.el8.noarch.rpm                                                                                                                      42 kB/s |  46 kB     00:01
+(2/48): perl-TermReadKey-2.37-7.el8.x86_64.rpm                                                                                                                   36 kB/s |  40 kB     00:01
+(3/48): perl-Net-SSLeay-1.88-1.el8.x86_64.rpm                                                                                                                   341 kB/s | 379 kB     00:01
+(4/48): perl-libnet-3.11-3.el8.noarch.rpm                                                                                                                       1.2 MB/s | 121 kB     00:00
+(5/48): perl-IO-Socket-IP-0.39-5.el8.noarch.rpm                                                                                                                 504 kB/s |  47 kB     00:00
+(6/48): perl-URI-1.73-3.el8.noarch.rpm                                                                                                                          1.1 MB/s | 116 kB     00:00
+(7/48): perl-Digest-MD5-2.55-396.el8.x86_64.rpm                                                                                                                 386 kB/s |  37 kB     00:00
+(8/48): perl-IO-Socket-SSL-2.066-3.el8.noarch.rpm                                                                                                               2.8 MB/s | 297 kB     00:00
+(9/48): perl-Mozilla-CA-20160104-7.el8.noarch.rpm                                                                                                               166 kB/s |  15 kB     00:00
+(10/48): perl-Digest-1.17-395.el8.noarch.rpm                                                                                                                    268 kB/s |  27 kB     00:00
+(11/48): git-2.18.2-1.el8_1.x86_64.rpm                                                                                                                          1.8 MB/s | 186 kB     00:00
+(12/48): git-core-doc-2.18.2-1.el8_1.noarch.rpm                                                                                                                  11 MB/s | 2.3 MB     00:00
+(13/48): perl-Git-2.18.2-1.el8_1.noarch.rpm                                                                                                                     696 kB/s |  77 kB     00:00
+(14/48): perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch.rpm                                                                                                       249 kB/s |  24 kB     00:00
+(15/48): perl-IO-1.38-416.el8.x86_64.rpm                                                                                                                        1.4 MB/s | 141 kB     00:00
+(16/48): git-core-2.18.2-1.el8_1.x86_64.rpm                                                                                                                      16 MB/s | 5.0 MB     00:00
+(17/48): perl-Getopt-Long-2.50-4.el8.noarch.rpm                                                                                                                 513 kB/s |  63 kB     00:00
+(18/48): perl-podlators-4.11-1.el8.noarch.rpm                                                                                                                   957 kB/s | 118 kB     00:00
+(19/48): perl-Time-Local-1.280-1.el8.noarch.rpm                                                                                                                 298 kB/s |  34 kB     00:00
+(20/48): perl-Data-Dumper-2.167-399.el8.x86_64.rpm                                                                                                              464 kB/s |  58 kB     00:00
+(21/48): emacs-filesystem-26.1-5.el8.noarch.rpm                                                                                                                 534 kB/s |  69 kB     00:00
+(22/48): perl-parent-0.237-1.el8.noarch.rpm                                                                                                                     221 kB/s |  20 kB     00:00
+(23/48): perl-Term-ANSIColor-4.06-396.el8.noarch.rpm                                                                                                            441 kB/s |  46 kB     00:00
+(24/48): perl-Encode-2.97-3.el8.x86_64.rpm                                                                                                                      9.2 MB/s | 1.5 MB     00:00
+(25/48): perl-Pod-Escapes-1.07-395.el8.noarch.rpm                                                                                                               173 kB/s |  20 kB     00:00
+(26/48): perl-MIME-Base64-3.15-396.el8.x86_64.rpm                                                                                                               309 kB/s |  31 kB     00:00
+(27/48): perl-Scalar-List-Utils-1.49-2.el8.x86_64.rpm                                                                                                           762 kB/s |  68 kB     00:00
+(28/48): perl-Text-ParseWords-3.30-395.el8.noarch.rpm                                                                                                           174 kB/s |  18 kB     00:00
+(29/48): perl-macros-5.26.3-416.el8.x86_64.rpm                                                                                                                  698 kB/s |  72 kB     00:00
+(30/48): perl-File-Path-2.15-2.el8.noarch.rpm                                                                                                                   392 kB/s |  38 kB     00:00
+(31/48): perl-Pod-Perldoc-3.28-396.el8.noarch.rpm                                                                                                               893 kB/s |  88 kB     00:00
+(32/48): perl-threads-shared-1.58-2.el8.x86_64.rpm                                                                                                              486 kB/s |  48 kB     00:00
+(33/48): perl-Pod-Simple-3.35-395.el8.noarch.rpm                                                                                                                2.1 MB/s | 213 kB     00:00
+(34/48): perl-File-Temp-0.230.600-1.el8.noarch.rpm                                                                                                              612 kB/s |  63 kB     00:00
+(35/48): perl-PathTools-3.74-1.el8.x86_64.rpm                                                                                                                   886 kB/s |  90 kB     00:00
+(36/48): perl-Pod-Usage-1.69-395.el8.noarch.rpm                                                                                                                 376 kB/s |  34 kB     00:00
+(37/48): perl-Errno-1.28-416.el8.x86_64.rpm                                                                                                                     724 kB/s |  76 kB     00:00
+(38/48): perl-constant-1.33-396.el8.noarch.rpm                                                                                                                  245 kB/s |  25 kB     00:00
+(39/48): perl-Term-Cap-1.17-395.el8.noarch.rpm                                                                                                                  229 kB/s |  23 kB     00:00
+(40/48): perl-HTTP-Tiny-0.074-1.el8.noarch.rpm                                                                                                                  499 kB/s |  58 kB     00:00
+(41/48): perl-Exporter-5.72-396.el8.noarch.rpm                                                                                                                  297 kB/s |  34 kB     00:00
+(42/48): perl-threads-2.21-2.el8.x86_64.rpm                                                                                                                     535 kB/s |  61 kB     00:00
+(43/48): perl-Unicode-Normalize-1.25-396.el8.x86_64.rpm                                                                                                         730 kB/s |  82 kB     00:00
+(44/48): perl-Storable-3.11-3.el8.x86_64.rpm                                                                                                                    839 kB/s |  98 kB     00:00
+(45/48): perl-Carp-1.42-396.el8.noarch.rpm                                                                                                                      274 kB/s |  30 kB     00:00
+(46/48): perl-Socket-2.027-3.el8.x86_64.rpm                                                                                                                     575 kB/s |  59 kB     00:00
+(47/48): perl-libs-5.26.3-416.el8.x86_64.rpm                                                                                                                    9.6 MB/s | 1.6 MB     00:00
+(48/48): perl-interpreter-5.26.3-416.el8.x86_64.rpm                                                                                                              24 MB/s | 6.3 MB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                           6.2 MB/s |  20 MB     00:03
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                        1/1
+  Installing       : perl-Carp-1.42-396.el8.noarch                                                                                                                                         1/48
+  Installing       : perl-libs-4:5.26.3-416.el8.x86_64                                                                                                                                     2/48
+  Installing       : perl-Exporter-5.72-396.el8.noarch                                                                                                                                     3/48
+  Installing       : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                                                            4/48
+  Installing       : perl-parent-1:0.237-1.el8.noarch                                                                                                                                      5/48
+  Installing       : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                                                              6/48
+  Installing       : git-core-2.18.2-1.el8_1.x86_64                                                                                                                                        7/48
+  Installing       : git-core-doc-2.18.2-1.el8_1.noarch                                                                                                                                    8/48
+  Installing       : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                                               9/48
+  Installing       : perl-macros-4:5.26.3-416.el8.x86_64                                                                                                                                  10/48
+  Installing       : perl-Errno-1.28-416.el8.x86_64                                                                                                                                       11/48
+  Installing       : perl-File-Path-2.15-2.el8.noarch                                                                                                                                     12/48
+  Installing       : perl-PathTools-3.74-1.el8.x86_64                                                                                                                                     13/48
+  Installing       : perl-constant-1.33-396.el8.noarch                                                                                                                                    14/48
+  Installing       : perl-threads-shared-1.58-2.el8.x86_64                                                                                                                                15/48
+  Installing       : perl-threads-1:2.21-2.el8.x86_64                                                                                                                                     16/48
+  Installing       : perl-Unicode-Normalize-1.25-396.el8.x86_64                                                                                                                           17/48
+  Installing       : perl-IO-1.38-416.el8.x86_64                                                                                                                                          18/48
+  Installing       : perl-Socket-4:2.027-3.el8.x86_64                                                                                                                                     19/48
+  Installing       : perl-interpreter-4:5.26.3-416.el8.x86_64                                                                                                                             20/48
+  Installing       : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                                                         21/48
+  Installing       : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                                                 22/48
+  Installing       : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                                                  23/48
+  Installing       : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                                                 24/48
+  Installing       : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                                                25/48
+  Installing       : perl-Net-SSLeay-1.88-1.el8.x86_64                                                                                                                                    26/48
+  Installing       : perl-Digest-1.17-395.el8.noarch                                                                                                                                      27/48
+  Installing       : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                                                  28/48
+  Installing       : perl-Error-1:0.17025-2.el8.noarch                                                                                                                                    29/48
+  Installing       : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                                                   30/48
+  Installing       : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                                                31/48
+  Installing       : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                                               32/48
+  Installing       : perl-Term-Cap-1.17-395.el8.noarch                                                                                                                                    33/48
+  Installing       : perl-Storable-1:3.11-3.el8.x86_64                                                                                                                                    34/48
+  Installing       : perl-Mozilla-CA-20160104-7.el8.noarch                                                                                                                                35/48
+  Installing       : perl-libnet-3.11-3.el8.noarch                                                                                                                                        36/48
+  Installing       : perl-URI-1.73-3.el8.noarch                                                                                                                                           37/48
+  Installing       : perl-Encode-4:2.97-3.el8.x86_64                                                                                                                                      38/48
+  Installing       : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                                                39/48
+  Installing       : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                                                 40/48
+  Installing       : perl-podlators-4.11-1.el8.noarch                                                                                                                                     41/48
+  Installing       : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                                                 42/48
+  Installing       : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                                                 43/48
+  Installing       : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                                                    44/48
+  Installing       : perl-IO-Socket-SSL-2.066-3.el8.noarch                                                                                                                                45/48
+  Installing       : emacs-filesystem-1:26.1-5.el8.noarch                                                                                                                                 46/48
+  Installing       : git-2.18.2-1.el8_1.x86_64                                                                                                                                            47/48
+  Installing       : perl-Git-2.18.2-1.el8_1.noarch                                                                                                                                       48/48
+  Running scriptlet: perl-Git-2.18.2-1.el8_1.noarch                                                                                                                                       48/48
+  Verifying        : perl-Error-1:0.17025-2.el8.noarch                                                                                                                                     1/48
+  Verifying        : perl-Net-SSLeay-1.88-1.el8.x86_64                                                                                                                                     2/48
+  Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                                                    3/48
+  Verifying        : perl-libnet-3.11-3.el8.noarch                                                                                                                                         4/48
+  Verifying        : perl-IO-Socket-IP-0.39-5.el8.noarch                                                                                                                                   5/48
+  Verifying        : perl-URI-1.73-3.el8.noarch                                                                                                                                            6/48
+  Verifying        : perl-IO-Socket-SSL-2.066-3.el8.noarch                                                                                                                                 7/48
+  Verifying        : perl-Digest-MD5-2.55-396.el8.x86_64                                                                                                                                   8/48
+  Verifying        : perl-Mozilla-CA-20160104-7.el8.noarch                                                                                                                                 9/48
+  Verifying        : perl-Digest-1.17-395.el8.noarch                                                                                                                                      10/48
+  Verifying        : git-core-doc-2.18.2-1.el8_1.noarch                                                                                                                                   11/48
+  Verifying        : git-2.18.2-1.el8_1.x86_64                                                                                                                                            12/48
+  Verifying        : perl-Git-2.18.2-1.el8_1.noarch                                                                                                                                       13/48
+  Verifying        : git-core-2.18.2-1.el8_1.x86_64                                                                                                                                       14/48
+  Verifying        : perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch                                                                                                                         15/48
+  Verifying        : perl-IO-1.38-416.el8.x86_64                                                                                                                                          16/48
+  Verifying        : perl-Getopt-Long-1:2.50-4.el8.noarch                                                                                                                                 17/48
+  Verifying        : perl-podlators-4.11-1.el8.noarch                                                                                                                                     18/48
+  Verifying        : perl-Data-Dumper-2.167-399.el8.x86_64                                                                                                                                19/48
+  Verifying        : perl-Time-Local-1:1.280-1.el8.noarch                                                                                                                                 20/48
+  Verifying        : emacs-filesystem-1:26.1-5.el8.noarch                                                                                                                                 21/48
+  Verifying        : perl-Encode-4:2.97-3.el8.x86_64                                                                                                                                      22/48
+  Verifying        : perl-parent-1:0.237-1.el8.noarch                                                                                                                                     23/48
+  Verifying        : perl-Term-ANSIColor-4.06-396.el8.noarch                                                                                                                              24/48
+  Verifying        : perl-Pod-Escapes-1:1.07-395.el8.noarch                                                                                                                               25/48
+  Verifying        : perl-MIME-Base64-3.15-396.el8.x86_64                                                                                                                                 26/48
+  Verifying        : perl-Scalar-List-Utils-3:1.49-2.el8.x86_64                                                                                                                           27/48
+  Verifying        : perl-Text-ParseWords-3.30-395.el8.noarch                                                                                                                             28/48
+  Verifying        : perl-macros-4:5.26.3-416.el8.x86_64                                                                                                                                  29/48
+  Verifying        : perl-File-Path-2.15-2.el8.noarch                                                                                                                                     30/48
+  Verifying        : perl-Pod-Perldoc-3.28-396.el8.noarch                                                                                                                                 31/48
+  Verifying        : perl-threads-shared-1.58-2.el8.x86_64                                                                                                                                32/48
+  Verifying        : perl-Pod-Simple-1:3.35-395.el8.noarch                                                                                                                                33/48
+  Verifying        : perl-File-Temp-0.230.600-1.el8.noarch                                                                                                                                34/48
+  Verifying        : perl-PathTools-3.74-1.el8.x86_64                                                                                                                                     35/48
+  Verifying        : perl-Pod-Usage-4:1.69-395.el8.noarch                                                                                                                                 36/48
+  Verifying        : perl-Errno-1.28-416.el8.x86_64                                                                                                                                       37/48
+  Verifying        : perl-constant-1.33-396.el8.noarch                                                                                                                                    38/48
+  Verifying        : perl-Term-Cap-1.17-395.el8.noarch                                                                                                                                    39/48
+  Verifying        : perl-HTTP-Tiny-0.074-1.el8.noarch                                                                                                                                    40/48
+  Verifying        : perl-Exporter-5.72-396.el8.noarch                                                                                                                                    41/48
+[root@ip-172-31-17-104 client-demo-project]# cat dockerfile
+FROM centos
+
+MAINTAINER santhosh.mahi3011@gmail.com
+
+RUN mkdir /opt/tomcat/
+
+WORKDIR /opt/tomcat
+RUN curl -O https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
+RUN tar xvfz apache*.tar.gz
+RUN mv apache-tomcat-9.0.30/* /opt/tomcat/.
+RUN yum -y install java
+RUN java -version
+
+RUN value=`cat conf/server.xml` && echo "${value//8080/8090}" >| conf/server.xml
+COPY tomcat-users.xml conf/tomcat-users.xml
+COPY context.xml webapps/manager/META-INF/
+COPY context-host.xml webapps/host-manager/META-INF/context.xml
+COPY myweb.war webapps/
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+[root@ip-172-31-17-104 client-demo-project]# cd /opt/
+[root@ip-172-31-17-104 opt]# wget https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
+--2020-01-31 10:34:18--  https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
+Resolving www-eu.apache.org (www-eu.apache.org)... 95.216.24.32, 2a01:4f9:2a:185f::2
+Connecting to www-eu.apache.org (www-eu.apache.org)|95.216.24.32|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11026056 (11M) [application/x-gzip]
+Saving to: ‘apache-tomcat-9.0.30.tar.gz’
+
+apache-tomcat-9.0.30.tar.gz                     100%[=======================================================================================================>]  10.51M  7.88MB/s    in 1.3s
+
+2020-01-31 10:34:20 (7.88 MB/s) - ‘apache-tomcat-9.0.30.tar.gz’ saved [11026056/11026056]
+
+[root@ip-172-31-17-104 opt]# tar xvfz apache-tomcat-9.0.30.tar.gz
+[root@ip-172-31-17-104 ~]# ls
+anaconda-ks.cfg  client-demo-project  original-ks.cfg
+[root@ip-172-31-17-104 ~]# cd client-demo-project/
+[root@ip-172-31-17-104 client-demo-project]# ls
+appspec.yml  check.yml  context-host.xml  context.xml  dockerfile  Jenkinsfile  pipeline.groovy  pom.xml  README.md  src  tomcat-users.xml
+[root@ip-172-31-17-104 client-demo-project]# cp tomcat-users.xml context*.xml /opt
+[root@ip-172-31-17-104 client-demo-project]# cat dockerfile
+FROM centos
+
+MAINTAINER santhosh.mahi3011@gmail.com
+
+RUN mkdir /opt/tomcat/
+
+WORKDIR /opt/tomcat
+RUN curl -O https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.30/bin/apache-tomcat-9.0.30.tar.gz
+RUN tar xvfz apache*.tar.gz
+RUN mv apache-tomcat-9.0.30/* /opt/tomcat/.
+RUN yum -y install java
+RUN java -version
+
+RUN value=`cat conf/server.xml` && echo "${value//8080/8090}" >| conf/server.xml
+COPY tomcat-users.xml conf/tomcat-users.xml
+COPY context.xml webapps/manager/META-INF/
+COPY context-host.xml webapps/host-manager/META-INF/context.xml
+COPY myweb.war webapps/
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+[root@ip-172-31-17-104 client-demo-project]# cd /opt/
+[root@ip-172-31-17-104 opt]# ls
+apache-tomcat-9.0.30.tar.gz  context-host.xml  context.xml  jdk1.8.0_212  jdk-8u212-linux-x64.tar.gz  tomcat  tomcat-users.xml
+
+[root@ip-172-31-17-104 opt]# cp tomcat-users.xml tomcat/conf/
+cp: overwrite 'tomcat/conf/tomcat-users.xml'? y
+[root@ip-172-31-17-104 opt]# cp context-host.xml tomcat/webapps/host-manager/META-INF/
+[root@ip-172-31-17-104 opt]# cp context-host.xml tomcat/webapps/host-manager/META-INF/context.xml
+cp: overwrite 'tomcat/webapps/host-manager/META-INF/context.xml'? y
+[root@ip-172-31-17-104 opt]# cp context.xml tomcat/webapps/manager/META-INF/context.xml
+cp: overwrite 'tomcat/webapps/manager/META-INF/context.xml'? y
+
+[root@ip-172-31-17-104 opt]# cd tomcat
+[root@ip-172-31-17-104 tomcat]# ls
+bin  BUILDING.txt  conf  CONTRIBUTING.md  lib  LICENSE  logs  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+[root@ip-172-31-17-104 tomcat]# cd conf/
+[root@ip-172-31-17-104 conf]# ls
+[root@ip-172-31-17-104 conf]# ls
+catalina.policy  catalina.properties  context.xml  jaspic-providers.xml  jaspic-providers.xsd  logging.properties  server.xml  tomcat-users.xml  tomcat-users.xsd  web.xml
+[root@ip-172-31-17-104 conf]# cd ..
+
+[root@ip-172-31-17-104 tomcat]# ls
+bin  BUILDING.txt  conf  CONTRIBUTING.md  lib  LICENSE  logs  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+[root@ip-172-31-17-104 tomcat]# cd bin/
+[root@ip-172-31-17-104 bin]# ll
+total 864
+-rw-r-----. 1 root root  35070 Dec  7 16:43 bootstrap.jar
+-rw-r-----. 1 root root  15953 Dec  7 16:43 catalina.bat
+-rwxr-x---. 1 root root  23792 Dec  7 16:43 catalina.sh
+-rw-r-----. 1 root root   1664 Dec  7 16:46 catalina-tasks.xml
+-rw-r-----. 1 root root   2123 Dec  7 16:43 ciphers.bat
+[root@ip-172-31-17-104 bin]# ll
+total 864
+-rw-r-----. 1 root root  35070 Dec  7 16:43 bootstrap.jar
+-rw-r-----. 1 root root  15953 Dec  7 16:43 catalina.bat
+-rwxr-x---. 1 root root  23792 Dec  7 16:43 catalina.sh
+-rw-r-----. 1 root root   1664 Dec  7 16:46 catalina-tasks.xml
+-rw-r-----. 1 root root   2123 Dec  7 16:43 ciphers.bat
+-rwxr-x---. 1 root root   1997 Dec  7 16:43 ciphers.sh
+-rw-r-----. 1 root root  25197 Dec  7 16:43 commons-daemon.jar
+-rw-r-----. 1 root root 206895 Dec  7 16:43 commons-daemon-native.tar.gz
+-rw-r-----. 1 root root   2040 Dec  7 16:43 configtest.bat
+-rwxr-x---. 1 root root   1922 Dec  7 16:43 configtest.sh
+-rwxr-x---. 1 root root   8675 Dec  7 16:43 daemon.sh
+-rw-r-----. 1 root root   2091 Dec  7 16:43 digest.bat
+-rwxr-x---. 1 root root   1965 Dec  7 16:43 digest.sh
+-rw-r-----. 1 root root   3606 Dec  7 16:43 makebase.bat
+-rwxr-x---. 1 root root   3382 Dec  7 16:43 makebase.sh
+-rw-r-----. 1 root root   3460 Dec  7 16:43 setclasspath.bat
+-rwxr-x---. 1 root root   3708 Dec  7 16:43 setclasspath.sh
+-rw-r-----. 1 root root   2020 Dec  7 16:43 shutdown.bat
+-rwxr-x---. 1 root root   1902 Dec  7 16:43 shutdown.sh
+-rw-r-----. 1 root root   2022 Dec  7 16:43 startup.bat
+-rwxr-x---. 1 root root   1904 Dec  7 16:43 startup.sh
+-rw-r-----. 1 root root  47884 Dec  7 16:43 tomcat-juli.jar
+-rw-r-----. 1 root root 419428 Dec  7 16:43 tomcat-native.tar.gz
+-rw-r-----. 1 root root   4574 Dec  7 16:43 tool-wrapper.bat
+-rwxr-x---. 1 root root   5540 Dec  7 16:43 tool-wrapper.sh
+-rw-r-----. 1 root root   2026 Dec  7 16:43 version.bat
+-rwxr-x---. 1 root root   1908 Dec  7 16:43 version.sh
+[root@ip-172-31-17-104 bin]# sh startup.sh
+Using CATALINA_BASE:   /opt/tomcat
+Using CATALINA_HOME:   /opt/tomcat
+Using CATALINA_TMPDIR: /opt/tomcat/temp
+Using JRE_HOME:        /usr
+Using CLASSPATH:       /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar
+Tomcat started.
+[root@ip-172-31-17-104 bin]# netstat -tunlp|grep 8090
+tcp6       0      0 :::8090                 :::*                    LISTEN      18217/java
+[root@ip-172-31-17-104 bin]# ls
+bootstrap.jar  catalina-tasks.xml  commons-daemon.jar            configtest.sh  digest.sh     setclasspath.bat  shutdown.sh  tomcat-juli.jar       tool-wrapper.sh
+catalina.bat   ciphers.bat         commons-daemon-native.tar.gz  daemon.sh      makebase.bat  setclasspath.sh   startup.bat  tomcat-native.tar.gz  version.bat
+catalina.sh    ciphers.sh          configtest.bat                digest.bat     makebase.sh   shutdown.bat      startup.sh   tool-wrapper.bat      version.sh
+[root@ip-172-31-17-104 bin]# cd ..
+[root@ip-172-31-17-104 tomcat]# ls
+bin  BUILDING.txt  conf  CONTRIBUTING.md  lib  LICENSE  logs  NOTICE  README.md  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+[root@ip-172-31-17-104 tomcat]# ll
+total 124
+drwxr-x---. 2 root root  4096 Jan 31 10:34 bin
+-rw-r-----. 1 root root 18982 Dec  7 16:46 BUILDING.txt
+drwx------. 3 root root   254 Jan 31 10:40 conf
+-rw-r-----. 1 root root  5409 Dec  7 16:46 CONTRIBUTING.md
+drwxr-x---. 2 root root  4096 Jan 31 10:34 lib
+-rw-r-----. 1 root root 57092 Dec  7 16:46 LICENSE
+drwxr-x---. 2 root root   197 Jan 31 10:39 logs
+-rw-r-----. 1 root root  2333 Dec  7 16:46 NOTICE
+-rw-r-----. 1 root root  3255 Dec  7 16:46 README.md
+-rw-r-----. 1 root root  6898 Dec  7 16:46 RELEASE-NOTES
+-rw-r-----. 1 root root 16262 Dec  7 16:46 RUNNING.txt
+drwxr-x---. 2 root root    30 Jan 31 10:34 temp
+drwxr-x---. 7 root root    81 Dec  7 16:43 webapps
+drwxr-x---. 3 root root    22 Jan 31 10:39 work
+[root@ip-172-31-17-104 tomcat]# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System message bus:/:/sbin/nologin
+systemd-coredump:x:999:997:systemd Core Dumper:/:/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/sbin/nologin
+tss:x:59:59:Account used by the trousers package to sandbox the tcsd daemon:/dev/null:/sbin/nologin
+polkitd:x:998:996:User for polkitd:/:/sbin/nologin
+unbound:x:997:995:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+sssd:x:996:993:User for sssd:/:/sbin/nologin
+insights:x:995:992:Red Hat Insights:/var/lib/insights:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/var/empty/sshd:/sbin/nologin
+chrony:x:994:991::/var/lib/chrony:/sbin/nologin
+ec2-user:x:1000:1000:Cloud User:/home/ec2-user:/bin/bash
+jenkins:x:993:990:Jenkins Automation Server:/var/lib/jenkins:/bin/false
+[root@ip-172-31-17-104 tomcat]# visudo
+[root@ip-172-31-17-104 tomcat]# ll
+total 124
+drwxr-x---. 2 root root  4096 Jan 31 10:34 bin
+-rw-r-----. 1 root root 18982 Dec  7 16:46 BUILDING.txt
+drwx------. 3 root root   254 Jan 31 10:40 conf
+-rw-r-----. 1 root root  5409 Dec  7 16:46 CONTRIBUTING.md
+drwxr-x---. 2 root root  4096 Jan 31 10:34 lib
+-rw-r-----. 1 root root 57092 Dec  7 16:46 LICENSE
+drwxr-x---. 2 root root   197 Jan 31 10:39 logs
+-rw-r-----. 1 root root  2333 Dec  7 16:46 NOTICE
+-rw-r-----. 1 root root  3255 Dec  7 16:46 README.md
+-rw-r-----. 1 root root  6898 Dec  7 16:46 RELEASE-NOTES
+-rw-r-----. 1 root root 16262 Dec  7 16:46 RUNNING.txt
+[root@ip-172-31-17-104 jenkins]# ls
+caches                                                                      jobs
+com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml  logs
+config.xml                                                                  nodeMonitors.xml
+hudson.model.UpdateCenter.xml                                               nodes
+hudson.plugins.git.GitTool.xml                                              org.jenkinsci.plugins.docker.commons.tools.DockerTool.xml
+hudson.plugins.gradle.Gradle.xml                                            org.jenkinsci.plugins.gitclient.JGitApacheTool.xml
+hudson.plugins.sonar.MsBuildSQRunnerInstallation.xml                        org.jenkinsci.plugins.gitclient.JGitTool.xml
+hudson.plugins.sonar.SonarGlobalConfiguration.xml                           org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml
+hudson.plugins.sonar.SonarRunnerInstallation.xml                            plugins
+hudson.tasks.Ant.xml                                                        queue.xml
+hudson.tasks.Maven.xml                                                      secret.key
+identity.key.enc                                                            secret.key.not-so-secret
+jenkins.install.InstallUtil.lastExecVersion                                 secrets
+jenkins.install.UpgradeWizard.state                                         updates
+jenkins.model.JenkinsLocationConfiguration.xml                              userContent
+jenkins.mvn.GlobalMavenConfig.xml                                           users
+jenkins.plugins.nodejs.tools.NodeJSInstallation.xml                         workflow-libs
+jenkins.telemetry.Correlator.xml                                            workspace
+[root@ip-172-31-17-104 jenkins]# cd workspace/
+[root@ip-172-31-17-104 workspace]# ls
+nodejspipeline  nodejspipeline@tmp
+[root@ip-172-31-17-104 workspace]# cd nodejspipeline
+[root@ip-172-31-17-104 nodejspipeline]# ls
